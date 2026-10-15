@@ -1,0 +1,26 @@
+:root { --ink:#1d2b2a; --paper:#f3f6f5; --card:#fff; --accent:#0f766e; --line:#cfdad8; --danger:#b42318; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Segoe UI", system-ui, sans-serif; color:var(--ink); background:var(--paper); min-height:100vh; display:grid; place-items:start center; padding:32px 16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:28px; width:100%; max-width:420px; }
+.card.wide { max-width:760px; }
+h1 { margin:0 0 20px; font-size:1.5rem; text-align:center; }
+input, textarea { width:100%; padding:10px 12px; margin-bottom:12px; border:1px solid var(--line); border-radius:6px; font:inherit; }
+textarea { min-height:130px; resize:vertical; }
+input:focus, textarea:focus, button:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+button { font:inherit; padding:10px 14px; border:0; border-radius:6px; background:var(--accent); color:#fff; cursor:pointer; }
+button.full { width:100%; }
+button.ghost { background:#e6eeec; color:var(--ink); }
+button.ghost.on { background:var(--ink); color:#fff; }
+button.danger { background:var(--danger); }
+button.sm { padding:5px 10px; font-size:.85rem; }
+.tabs { display:flex; gap:8px; margin-bottom:18px; } .tabs button { flex:1; }
+.link { background:none; color:var(--accent); padding:0; text-decoration:underline; }
+.sub { text-align:center; font-size:.9rem; margin-top:14px; }
+.msg { padding:9px 12px; border-radius:6px; margin-bottom:12px; font-size:.9rem; }
+.msg.err { background:#fdecea; color:var(--danger); } .msg.ok { background:#e3f4ef; color:var(--accent); }
+table { width:100%; border-collapse:collapse; margin-bottom:16px; }
+th, td { text-align:left; padding:10px; border-bottom:1px solid var(--line); vertical-align:top; }
+td.act { white-space:nowrap; display:flex; gap:6px; }
+.top { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-size:.9rem; }
+.panel { border:1px solid var(--line); border-radius:8px; padding:14px; margin-top:8px; background:var(--paper); }
+@media (max-width:560px){ td.act{flex-direction:column;} }
